@@ -1,7 +1,18 @@
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 function App() {
   return (
-    <div className="flex items-center justify-center h-screen">
-      <h1 className="text-5xl uppercase font-bold">Couponio</h1>
+    <div className="font-poppins">
+      {/* Common header for every page */}
+      <Header />
+      <div>
+        {/* Body section for every Page */}
+        <Outlet />
+      </div>
+      {/* Common footer for every page  */}
+      <Footer />
     </div>
   );
 }

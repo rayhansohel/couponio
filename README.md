@@ -1,8 +1,35 @@
-# React + Vite
+# Couponio 🛍️  
+**Your Ultimate Coupon Hub!**  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Couponio is a dynamic web platform where users can find, share, and use the latest discount coupons for a wide variety of stores and online platforms. Our mission is to help users save money while shopping online.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features ✨  
+### 🔍 **Search for Coupons**  
+- Find coupons for your favorite stores with ease.  
+- Filter coupons by category or store name.  
+
+### 🏷️ **Explore Categories**  
+- Browse coupons by categories such as Electronics, Fashion, Groceries, and more.  
+
+### 🌟 **Save & Share Coupons**  
+- Save your favorite coupons for later use.  
+- Share coupons with others via social media.  
+
+### 🔔 **Real-time Updates**  
+- Get notifications for newly added or expiring coupons.  
+
+### 📊 **Analytics Dashboard**  
+- View popular coupons and track savings over time.  
+
+---
+
+## Technologies Used 🛠️  
+- **Frontend**: React.js, Tailwind CSS, DaisyUI  
+- **Authentication**: Firebase  
+- **Notifications**: React-Toastify  
+
+
+
+
