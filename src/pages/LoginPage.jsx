@@ -1,12 +1,16 @@
 import { Helmet } from "react-helmet-async";
+import LoginForm from "../components/loginForm";
+
 
 const LoginPage = () => {
   return (
-    <div>
+    <div className="w-full flex flex-col gap-4 items-center justify-center p-4">
       <Helmet>
         <title>Login - Couponio</title>
       </Helmet>
-      <div className="text-6xl font-semibold uppercase bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 bg-clip-text text-transparent">Login</div>
+      <div>
+        <LoginForm />
+      </div>
     </div>
   );
 };
