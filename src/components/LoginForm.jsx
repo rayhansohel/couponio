@@ -1,12 +1,48 @@
 import { BiLogIn } from "react-icons/bi";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import { useContext } from "react";
+import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LoginForm = () => {
-  const { userLogin, setUser } = useContext(AuthContext);
-  const navigate = useNavigate(); // Hook for navigation
+  const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const emailRef = useRef();
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleForgetPassword = () => {
+    const email = emailRef.current.value;
+    if (email) {
+      navigate(`/forgot-password?email=${email}`);
+    } else {
+      toast.error("Please provide a valid email address", {
+        position: "bottom-right",
+        hideProgressBar: true,
+      });
+    }
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        toast.success("Login with Google successful!", {
+          position: "bottom-right",
+          hideProgressBar: true,
+        });
+        navigate("/");
+      })
+      .catch(() => {
+        toast.error("Google sign-in failed. Try again!", {
+          position: "bottom-right",
+          hideProgressBar: true,
+        });
+      });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,29 +54,35 @@ const LoginForm = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        navigate("/"); // Navigate to the home page or desired route
+        toast.success("Login successful!", {
+          position: "bottom-right",
+          hideProgressBar: true,
+        });
+        navigate("/");
       })
-      .catch((error) => {
-        console.error("Login Error:", error);
-        alert(error.message); // Replace with React-Toastify for better notifications if needed
+      .catch(() => {
+        toast.error("Put valid email and password", {
+          position: "bottom-right",
+          hideProgressBar: true,
+        });
       });
   };
 
   return (
     <div>
-      <div className="card min-w-[380px] md:w-[500px] shadow-2xl rounded-3xl border border-gray-900 bg-[#03071265] backdrop-blur-xl flex flex-col items-center justify-center pt-8">
+      <div className="card min-w-[380px] md:w-[500px] shadow-2xl rounded-3xl border border-gray-900 bg-[#010409b2] backdrop-blur-xl flex flex-col items-center justify-center pt-8">
         <div className="text-3xl bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 bg-clip-text text-transparent">
           Login Here
         </div>
         <div className="mt-10">
-          <NavLink
-            to="/"
+          <button
+            onClick={handleGoogleSignIn}
             type="button"
             className="flex justify-center items-center gap-2 text-white hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm min-w-10 min-h-10 px-6 text-center"
           >
             <FcGoogle className="text-xl" />
             <span>Login with Google</span>
-          </NavLink>
+          </button>
         </div>
         <div className="flex w-full flex-col border-opacity-50 px-9 mt-4 -mb-4">
           <div className="divider">OR</div>
@@ -50,20 +92,34 @@ const LoginForm = () => {
             <input
               type="email"
               name="email"
+              ref={emailRef}
               placeholder="Enter your email address"
-              className="input input-bordered border-gray-900 bg-gray-950 h-11 text-xs font-semibold focus:outline-none rounded-full"
+              className="input input-bordered border-gray-900 bg-black h-11 text-xs font-semibold focus:outline-none rounded-full"
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="password"
               placeholder="Enter your password"
-              className="input input-bordered border-gray-900 bg-gray-950 h-11 text-xs font-semibold focus:outline-none rounded-full"
+              className="input input-bordered border-gray-900 bg-black h-11 text-xs font-semibold focus:outline-none rounded-full pr-10"
               required
             />
-            <div className="text-gray-400 hover:text-lime-400 ml-4">
+            <span
+              className="absolute right-4 top-3 cursor-pointer text-gray-400 hover:text-lime-400"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? (
+                <AiFillEyeInvisible size={20} />
+              ) : (
+                <AiFillEye size={20} />
+              )}
+            </span>
+            <div
+              onClick={handleForgetPassword}
+              className="text-gray-400 hover:text-lime-400 ml-4"
+            >
               <a href="#" className="text-xs">
                 Forgot password?
               </a>
@@ -96,4 +152,3 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
-

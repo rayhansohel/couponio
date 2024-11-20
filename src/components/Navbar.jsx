@@ -6,13 +6,16 @@ import { LuSquareCode } from "react-icons/lu";
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
 import defaultAvatar from "../assets/default-avatar.png";
+import Dropdown from "./Dropdown";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   return (
-    <div className="pt-4">
-      <div className="navbar border border-gray-900 bg-[#03071244] rounded-full px-4 w-11/12 mx-auto backdrop-blur-md shadow-2xl">
+    <div className="pt-4 container mx-auto">
+      <div className="navbar border border-gray-900 bg-[#010409b2] rounded-full px-4 w-11/12 mx-auto backdrop-blur-md shadow-2xl">
+
+      {/* Brand Logo */}
         <div className="navbar-start flex gap-1 items-center">
           <Link to="/">
             <img className="w-5 md:w-6" src={brandLogo} alt="Site Logo" />
@@ -21,6 +24,8 @@ const Navbar = () => {
             Couponio
           </Link>
         </div>
+
+        {/* Menu Items */}
         <div className="navbar-center hidden lg:flex">
           <ul className="flex gap-12 text-sm font-light">
             <li>
@@ -69,16 +74,18 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="navbar-end space-x-2">
+
+        {/* Login or register buttons */}
+        <div className="hidden lg:flex navbar-end space-x-2">
           {/* Conditionally hide Register button if user is logged in */}
           {!user && (
             <NavLink
               to="/auth/register"
               type="button"
-              className="flex justify-center items-center gap-2 font-medium text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm min-w-10 min-h-10 md:px-6 text-center"
+              className="btn-sm flex justify-center items-center gap-2 font-medium text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm py-5 md:py-4 md:px-4 text-center"
             >
               <TbWriting className="text-xl -ml-1" />
-              <span className="hidden md:flex">Register</span>
+              <span>Register</span>
             </NavLink>
           )}
 
@@ -87,21 +94,19 @@ const Navbar = () => {
               <>
                 {/* Display user's name and photo with logout button if logged in */}
                 <div className="flex items-center gap-2">
-                  {/* Name displayed before Avatar */}
-                  <div className="hidden md:flex text-white text-sm -mb-1">{user.email}</div>
                   <img
-                    src={user.photoURL || defaultAvatar}  // Fallback to default avatar if photoURL is not available
+                    src={user.photoURL || defaultAvatar}
                     alt="User Avatar"
-                    className="w-10 h-10 rounded-full border-2 border-gray-800"
+                    className="w-8 h-8 rounded-full border-2 border-gray-800"
                   />
                   <NavLink
                     to="/"
                     onClick={logOut}
                     type="button"
-                    className="flex justify-center items-center gap-1 font-medium text-black bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br rounded-full text-sm min-w-10 min-h-10 md:px-6 text-center"
+                    className="btn-sm flex justify-center items-center gap-1 font-medium text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm py-5 md:py-4 md:px-4 text-center"
                   >
                     <TbLogout2 className="text-xl -ml-1" />
-                    <span className="hidden md:flex">Logout</span>
+                    <span>Logout</span>
                   </NavLink>
                 </div>
               </>
@@ -109,14 +114,19 @@ const Navbar = () => {
               <NavLink
                 to="/auth/login"
                 type="button"
-                className="flex justify-center items-center gap-1 font-medium text-black bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br rounded-full text-sm min-w-10 min-h-10 md:px-6 text-center"
+                className="btn-sm flex justify-center items-center gap-1 font-medium text-black bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br rounded-full text-sm py-5 md:py-4 md:px-4 text-center"
               >
                 <TbLogin2 className="text-xl -ml-1" />
-                <span className="hidden md:flex">Login</span>
+                <span>Login</span>
               </NavLink>
             )}
           </div>
         </div>
+
+        {/* Dropdown Menu Button */}
+        <div className="navbar-end flex lg:hidden ml-2">
+            <Dropdown />
+          </div>
       </div>
     </div>
   );
