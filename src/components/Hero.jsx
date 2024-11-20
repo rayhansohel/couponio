@@ -1,8 +1,9 @@
+import HeroSlider from "./HeroSlider";
 
 const Hero = () => {
   return (
-    <div>
-      
+    <div className="container mx-auto w-11/12">
+      <HeroSlider/>
     </div>
   );
 };

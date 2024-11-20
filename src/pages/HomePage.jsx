@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import Hero from "../components/Hero";
 
 const HomePage = () => {
   return (
@@ -7,7 +8,7 @@ const HomePage = () => {
         <title>Home - Couponio</title>
       </Helmet>
       <div className="text-6xl font-semibold uppercase bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 bg-clip-text text-transparent">
-        home
+        <Hero/>
       </div>
     </div>
   );
