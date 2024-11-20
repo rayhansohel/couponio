@@ -31,7 +31,6 @@ const RegisterForm = () => {
     return "";
   };
 
-
   const validateEmail = (email) => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
@@ -47,7 +46,6 @@ const RegisterForm = () => {
     const email = form.get("email");
     const photoURL = form.get("photoURL") || "";
     const password = form.get("password");
-
 
     const emailValidationError = validateEmail(email);
     if (emailValidationError) {
@@ -124,11 +122,9 @@ const RegisterForm = () => {
   return (
     <div>
       <div className="card min-w-[380px] md:w-[500px] shadow-2xl rounded-3xl border border-gray-900 bg-[#010409b2] backdrop-blur-xl flex flex-col items-center justify-center pt-8">
-        <div className="text-3xl bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 bg-clip-text text-transparent">
+        <div className="text-xl md:text-3xl bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 bg-clip-text text-transparent">
           Register Here
         </div>
-
-        {/* Google Register Button */}
         <div className="mt-10">
           <button
             onClick={handleGoogleRegister}
@@ -139,12 +135,9 @@ const RegisterForm = () => {
             <span>Register with Google</span>
           </button>
         </div>
-
         <div className="flex w-full flex-col border-opacity-50 px-9 mt-4 -mb-4">
           <div className="divider">OR</div>
         </div>
-
-        {/* Form */}
         <form onSubmit={handleSubmit} className="card-body w-full space-y-2">
           <div className="form-control">
             <input
@@ -192,19 +185,17 @@ const RegisterForm = () => {
               {showPassword ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20} />}
             </span>
           </div>
-
           {passwordError && (
             <div className="text-sm text-red-500 mt-2 ml-4">
               <p>{passwordError}</p>
             </div>
           )}
-
           <div className="form-control mt-6">
             <button
               type="submit"
-              className="flex justify-center items-center gap-2 text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm min-w-10 min-h-10 md:px-6 text-center"
+              className="flex justify-center items-center gap-2 text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm p-3 text-center"
             >
-              <TbWriting className="text-xl -ml-1" />
+              <TbWriting className="text-lg -ml-1" />
               <span>Register</span>
             </button>
           </div>
@@ -226,4 +217,3 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
-

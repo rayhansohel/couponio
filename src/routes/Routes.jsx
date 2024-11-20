@@ -6,8 +6,10 @@ import BrandsPage from "../pages/BrandsPage";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import AboutPage from "../pages/AboutPage";
-import MyProfilePage from "../pages/MyProfilePage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
+import ProfileUpdatePage from "../pages/ProfileUpdatePage";
+import ProfilePage from "../pages/ProfilePage";
+import PrivateRoute from "./PrivateRoute"; // make sure to import the PrivateRoute
 
 const Routes = createBrowserRouter([
   {
@@ -29,7 +31,19 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <MyProfilePage />,
+        element: (
+          <PrivateRoute>
+            <ProfilePage />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/profile/update",
+        element: (
+          <PrivateRoute>
+            <ProfileUpdatePage />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/auth/login",

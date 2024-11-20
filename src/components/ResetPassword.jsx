@@ -62,7 +62,7 @@ const ResetPassword = () => {
               onClick={handleResetPassword}
               className="flex justify-center items-center gap-2 text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm min-w-10 min-h-10 md:px-6 text-center"
             >
-              <BiReset className="text-xl -ml-1" />
+              <BiReset className="text-lg -ml-1" />
               Reset Password
             </button>
           </div>

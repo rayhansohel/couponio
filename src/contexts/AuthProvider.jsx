@@ -18,85 +18,119 @@ export const AuthContext = createContext();
 
 const auth = getAuth(app);
 
-export const useAuth = () => {
-  return useContext(AuthContext);
-};
+// Custom Hook for Using Auth Context
+export const useAuth = () => useContext(AuthContext);
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const googleProvider = new GoogleAuthProvider();
 
-  const signInWithGoogle = () => {
-    return signInWithPopup(auth, googleProvider).catch((err) => {
-      setError(err.message);
-    });
+  // Handle Errors
+  const handleError = (err) => {
+    setError(err.message);
+    console.error("Auth Error:", err.message);
   };
 
-  const createNewUser = async (email, password) => {
+  // Sign In with Google
+  const signInWithGoogle = async () => {
+    setError(null);
     try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      return userCredential;
-    } catch (error) {
-      setError(error.message);
-      throw error;
+      const result = await signInWithPopup(auth, googleProvider);
+      setUser(result.user);
+      return result.user;
+    } catch (err) {
+      handleError(err);
     }
   };
 
-  const userLogin = (email, password) => {
-    return signInWithEmailAndPassword(auth, email, password).catch((err) => {
-      setError(err.message);
-    });
+  // Register New User
+  const createNewUser = async (email, password) => {
+    setError(null);
+    try {
+      const result = await createUserWithEmailAndPassword(auth, email, password);
+      setUser(result.user);
+      return result.user;
+    } catch (err) {
+      handleError(err);
+      throw err;
+    }
   };
 
-  const logOut = () => {
-    return signOut(auth).catch((err) => {
-      setError(err.message);
-    });
+  // Log In User
+  const userLogin = async (email, password) => {
+    setError(null);
+    try {
+      const result = await signInWithEmailAndPassword(auth, email, password);
+      setUser(result.user);
+      return result.user;
+    } catch (err) {
+      handleError(err);
+    }
   };
 
-  const updateUserProfile = (displayName, photoURL) => {
+  // Log Out
+  const logOut = async () => {
+    setError(null);
+    try {
+      await signOut(auth);
+      setUser(null);
+    } catch (err) {
+      handleError(err);
+    }
+  };
+
+  // Update User Profile
+  const updateUserProfile = async (displayName, photoURL) => {
+    setError(null);
     if (user) {
-      return updateProfile(user, { displayName, photoURL }).catch((err) => {
-        setError(err.message);
-      });
+      try {
+        await updateProfile(auth.currentUser, { displayName, photoURL });
+        setUser({ ...auth.currentUser, displayName, photoURL });
+      } catch (err) {
+        handleError(err);
+      }
     }
   };
 
-  const resetPassword = (email) => {
-    return sendPasswordResetEmail(auth, email).catch((err) => {
-      setError(err.message);
-    });
+  // Reset Password
+  const resetPassword = async (email) => {
+    setError(null);
+    try {
+      await sendPasswordResetEmail(auth, email);
+    } catch (err) {
+      handleError(err);
+    }
   };
 
+  // Monitor Auth State
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false);
     });
-    return () => {
-      unsubscribe();
-    };
+    return () => unsubscribe();
   }, []);
 
   const authInfo = {
     user,
     setUser,
     createNewUser,
-    logOut,
     userLogin,
+    logOut,
     updateUserProfile,
     resetPassword,
     signInWithGoogle,
     error,
+    loading,
   };
 
   return (
-    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={authInfo}>
+      {!loading && children}
+    </AuthContext.Provider>
   );
 };
 

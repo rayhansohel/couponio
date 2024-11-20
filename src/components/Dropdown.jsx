@@ -111,13 +111,13 @@ const Dropdown = () => {
             </div>
             <div className="divider divider-horizontal"></div>
             <div>
-              <div className="space-y-2 grid items-center">
+              <div className="space-y-4 grid items-center">
                 {!user && (
                   <NavLink
                     to="/auth/register"
                     type="button"
                     onClick={closeDropdown}
-                    className="btn-sm flex justify-center items-center gap-2 font-medium text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm py-5 md:py-4 md:px-4 text-center"
+                    className="btn-sm flex justify-center items-center gap-2 font-medium text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm p-4 text-center"
                   >
                     <TbWriting className="text-xl -ml-1" />
                     <span>Register</span>
@@ -145,9 +145,9 @@ const Dropdown = () => {
                             closeDropdown();
                           }}
                           type="button"
-                          className="btn-sm flex justify-center items-center gap-1 font-medium text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm py-5 md:py-4 md:px-4 text-center"
+                          className="btn-sm flex justify-center items-center gap-1 font-medium text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm p-4 text-center"
                         >
-                          <TbLogout2 className="text-xl -ml-1" />
+                          <TbLogout2 className="text-lg -ml-1" />
                           <span>Logout</span>
                         </NavLink>
                       </div>
@@ -157,9 +157,9 @@ const Dropdown = () => {
                       to="/auth/login"
                       type="button"
                       onClick={closeDropdown}
-                      className="btn-sm flex justify-center items-center gap-1 font-medium text-black bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br rounded-full text-sm py-5 md:py-4 md:px-4 text-center"
+                      className="btn-sm flex justify-center items-center gap-1 font-medium text-black bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br rounded-full text-sm p-4 text-center"
                     >
-                      <TbLogin2 className="text-xl -ml-1" />
+                      <TbLogin2 className="text-lg -ml-1" />
                       <span>Login</span>
                     </NavLink>
                   )}

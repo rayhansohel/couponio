@@ -2,16 +2,22 @@ import { BiLogIn } from "react-icons/bi";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import { useContext, useRef, useState } from "react";
+import { useContext, useRef, useState, useEffect } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const LoginForm = () => {
-  const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
+  const { userLogin, setUser, signInWithGoogle, user } = useContext(AuthContext);
   const navigate = useNavigate();
   const emailRef = useRef();
   const [showPassword, setShowPassword] = useState(false);
+
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   const handleForgetPassword = () => {
     const email = emailRef.current.value;
@@ -34,6 +40,7 @@ const LoginForm = () => {
           position: "bottom-right",
           hideProgressBar: true,
         });
+        window.location.reload();
         navigate("/");
       })
       .catch(() => {
@@ -58,6 +65,7 @@ const LoginForm = () => {
           position: "bottom-right",
           hideProgressBar: true,
         });
+        window.location.reload();
         navigate("/");
       })
       .catch(() => {
@@ -71,7 +79,7 @@ const LoginForm = () => {
   return (
     <div>
       <div className="card min-w-[380px] md:w-[500px] shadow-2xl rounded-3xl border border-gray-900 bg-[#010409b2] backdrop-blur-xl flex flex-col items-center justify-center pt-8">
-        <div className="text-3xl bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 bg-clip-text text-transparent">
+        <div className="text-xl md:text-3xl bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 bg-clip-text text-transparent">
           Login Here
         </div>
         <div className="mt-10">
@@ -80,7 +88,7 @@ const LoginForm = () => {
             type="button"
             className="flex justify-center items-center gap-2 text-white hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm min-w-10 min-h-10 px-6 text-center"
           >
-            <FcGoogle className="text-xl" />
+            <FcGoogle className="text-lg" />
             <span>Login with Google</span>
           </button>
         </div>
@@ -128,7 +136,7 @@ const LoginForm = () => {
           <div className="form-control mt-6">
             <button
               type="submit"
-              className="flex justify-center items-center gap-2 text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm min-w-10 min-h-10 md:px-6 text-center"
+              className="flex justify-center items-center gap-2 text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm p-3 text-center"
             >
               <BiLogIn className="text-xl -ml-1" />
               <span>Login</span>
