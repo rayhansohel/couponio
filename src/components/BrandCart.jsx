@@ -7,9 +7,11 @@ const BrandCart = () => {
   if (error)
     return <div className="text-center text-red-500">Error: {error}</div>;
 
+  const filteredBrands = brands?.filter((brand) => brand.isSaleOn);
+
   return (
     <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {brands?.map((brand) => (
+      {filteredBrands?.map((brand) => (
         <div
           key={brand.id}
           className="shadow-2xl rounded-3xl border border-gray-900 bg-[#010409b2] text-sm backdrop-blur-xl hover:scale-105 transition-transform"
@@ -42,3 +44,4 @@ const BrandCart = () => {
 };
 
 export default BrandCart;
+

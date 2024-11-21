@@ -4,7 +4,7 @@
       "brand_name": "Daraz",
       "rating": 4.7,
       "description": "Daraz is one of the largest e-commerce platforms in Bangladesh, offering a wide range of products.",
-      "brand_logo": "https://i.ibb.co.com/JpGdrYG/daraz-logo.png",
+      "brand_logo": "https://i.ibb.co.com/r6Z0sRH/daraz-logo.png",
       "coupons": [
         {
           "coupon-code": "DARAZ100",
@@ -45,7 +45,7 @@
       "brand_name": "Aarong",
       "rating": 4.5,
       "description": "Aarong is one of the largest retail chains in Bangladesh, known for handmade products.",
-      "brand_logo": "https://i.ibb.co.com/gzgGSSm/aarong-logo.png",
+      "brand_logo": "https://i.ibb.co.com/JdhLYCX/aarong-logo.png",
       "coupons": [
         {
           "coupon-code": "AARONG15",
@@ -78,7 +78,7 @@
       ],
       "shop-Link": "https://www.aarong.com/",
       "category": "Fashion",
-      "isSaleOn": true
+      "isSaleOn": false
     },
 
     {
@@ -86,7 +86,7 @@
       "brand_name": "Bata",
       "rating": 4.5,
       "description": "Bata is a popular footwear brand known for its comfortable and stylish shoes.",
-      "brand_logo": "https://i.ibb.co.com/M9Yhx0d/bata-logo.png",
+      "brand_logo": "https://i.ibb.co.com/sRKcWP5/bata-logo.png",
       "coupons": [
         {
           "coupon-code": "BATA20",
@@ -120,7 +120,7 @@
       "brand_name": "Unilever",
       "rating": 4.6,
       "description": "Unilever offers a variety of household, personal care, and food products in Bangladesh.",
-      "brand_logo": "https://i.ibb.co.com/c2DdkcN/unilever-logo.png",
+      "brand_logo": "https://i.ibb.co.com/gtLRKMT/unilever-logo.png",
       "coupons": [
         {
           "coupon-code": "UNILEVER50",
@@ -154,7 +154,7 @@
       "brand_name": "Shwapno",
       "rating": 4.8,
       "description": "Shwapno offers a wide range of groceries and daily essentials in Bangladesh.",
-      "brand_logo": "https://i.ibb.co.com/XVqCw2c/shwapno-logo.png",
+      "brand_logo": "https://i.ibb.co.com/BgbVYYd/shwapno-logo.png",
       "coupons": [
         {
           "coupon-code": "SWAPNO100",
@@ -195,7 +195,7 @@
       "brand_name": "Chaldal",
       "rating": 4.6,
       "description": "Chaldal is one of the most popular online grocery delivery services in Bangladesh.",
-      "brand_logo": "https://i.ibb.co.com/LtqJNjV/chaldal-logo.png",
+      "brand_logo": "https://i.ibb.co.com/ckKzx4Z/chaldal-logo.png",
       "coupons": [
         {
           "coupon-code": "CHALDAL15",
@@ -229,7 +229,7 @@
       "brand_name": "Robi",
       "rating": 4.3,
       "description": "Robi is one of the leading telecom operators in Bangladesh offering a wide range of mobile services.",
-      "brand_logo": "https://i.ibb.co.com/D1h6vSJ/robi-logo.png",
+      "brand_logo": "https://i.ibb.co.com/DkRfdXV/robi-logo.png",
       "coupons": [
         {
           "coupon-code": "ROBI50",
@@ -270,7 +270,7 @@
       "brand_name": "Othoba",
       "rating": 4.3,
       "description": "Othoba is an online marketplace offering various categories including electronics, fashion, and groceries.",
-      "brand_logo": "https://i.ibb.co.com/VH0kJqR/othoba-logo.png",
+      "brand_logo": "https://i.ibb.co.com/dkMQgKd/othoba-logo.png",
       "coupons": [
         {
           "coupon-code": "OTHOBA50",
@@ -297,7 +297,7 @@
       "brand_name": "Meena Bazar",
       "rating": 4.6,
       "description": "Meena Bazar offers a wide range of groceries and household items.",
-      "brand_logo": "https://i.ibb.co.com/m5pNWJW/meena-bazar-logo.png",
+      "brand_logo": "https://i.ibb.co.com/RhxVr3x/meena-bazar-logo.png",
       "coupons": [
         {
           "coupon-code": "MEENA100",
@@ -331,7 +331,7 @@
       "brand_name": "Rokomari",
       "rating": 4.7,
       "description": "Rokomari is a leading online bookstore in Bangladesh with a vast collection of books and educational materials.",
-      "brand_logo": "https://i.ibb.co.com/k1yvRCQ/rokomari-logo.png",
+      "brand_logo": "https://i.ibb.co.com/mHFVzHM/rokomari-logo.png",
       "coupons": [
         {
           "coupon-code": "ROKOMARI100",
@@ -343,7 +343,7 @@
       ],
       "shop-Link": "https://www.rokomari.com/",
       "category": "Books",
-      "isSaleOn": true
+      "isSaleOn": false
     },
 
     {
@@ -351,7 +351,7 @@
       "brand_name": "Pickabo",
       "rating": 4.2,
       "description": "Pickabo is an online E-commerce store offering trendy electronics, gadgets, and accessories.",
-      "brand_logo": "https://i.ibb.co.com/4spYPRn/pickabo-logo.png",
+      "brand_logo": "https://i.ibb.co.com/KVTdBnV/pickabo-logo.png",
       "coupons": [
         {
           "coupon-code": "PICKABO10",
@@ -363,7 +363,7 @@
       ],
       "shop-Link": "https://www.pickabo.com.bd/",
       "category": "E-commerce",
-      "isSaleOn": true
+      "isSaleOn": false
     },
 
     {
@@ -371,7 +371,7 @@
       "brand_name": "Apex",
       "rating": 4.6,
       "description": "Apex is a well-known footwear brand in Bangladesh, offering a variety of shoes and accessories.",
-      "brand_logo": "https://i.ibb.co.com/SRsTmKS/apex-logo.png",
+      "brand_logo": "https://i.ibb.co.com/JsWD97N/apex-logo.png",
       "coupons": [
         {
           "coupon-code": "APEX30",

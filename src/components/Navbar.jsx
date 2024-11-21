@@ -27,7 +27,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="pt-4 container mx-auto">
+    <div className="pt-1 container mx-auto">
       <div className="navbar border border-gray-900 bg-[#010409b2] rounded-full px-4 w-11/12 mx-auto backdrop-blur-md shadow-2xl">
         {/* Brand Logo */}
         <div className="navbar-start flex gap-1 items-center">
