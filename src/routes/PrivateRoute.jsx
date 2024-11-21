@@ -1,10 +1,23 @@
-/* eslint-disable react/prop-types */
-import { Navigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { useAuth } from "../contexts/AuthProvider";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
-  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (loading) {
+      // Show a loading spinner or placeholder while determining auth state
+      return;
+    }
+
+    if (!user) {
+      // If the user is not logged in, store the current path in sessionStorage
+      sessionStorage.setItem("redirectPath", window.location.pathname);
+      navigate("/auth/login");
+    }
+  }, [user, loading, navigate]);
 
   if (loading) {
     // Show a loading spinner or placeholder while determining auth state
@@ -16,14 +29,9 @@ const PrivateRoute = ({ children }) => {
     return children;
   }
 
-  // If user is not authenticated, redirect to login with the current location
-  return (
-    <Navigate
-      to="/auth/login"
-      state={{ from: location }} // Store the current location for redirection after login
-      replace
-    />
-  );
+  // If user is not authenticated, they will be redirected by useEffect
+  return null;  // Or you can return a placeholder like a loading spinner
 };
 
 export default PrivateRoute;
+

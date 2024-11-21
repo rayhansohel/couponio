@@ -26,7 +26,8 @@ const BrandsPageContent = () => {
     if (isLoggedIn) {
       navigate(`/brands/${brand.id}`); // Navigate to CouponPage using the brand's id
     } else {
-      navigate("/auth/login"); // Redirect to login if not logged in
+      // Redirect to login page and pass the state (intended route)
+      navigate("/auth/login", { state: { from: `/brands/${brand.id}` } });
     }
   };
 
@@ -101,7 +102,7 @@ const BrandsPageContent = () => {
                   onClick={() => handleViewCoupons(brand)} // Corrected the click handler
                   className="flex justify-center items-center gap-2 text-lime-400 hover:text-black bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm px-6 py-2 text-center"
                 >
-                  <MdOutlineGridView className="text-lg -ml-1"/>
+                  <MdOutlineGridView className="text-lg -ml-1" />
                   View Coupons
                 </button>
               </div>
