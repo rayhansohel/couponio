@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import BrandsPageContent from "../components/BrandsPageContent";
 
 
 const BrandsPage = () => {
@@ -7,8 +8,8 @@ const BrandsPage = () => {
         <Helmet>
           <title>Brands - Couponio</title>
         </Helmet>
-        <div className="text-6xl font-semibold uppercase bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 bg-clip-text text-transparent">
-          Brand
+        <div className="container mx-auto"> 
+          <BrandsPageContent/>
         </div>
       </div>
     );

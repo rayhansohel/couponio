@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import "aos/dist/aos.css";
 
 const BrandsMarquee = ({ brands }) => {
 
   return (
-    <div   data-aos="fade-up" className="overflow-hidden py-2 md:py-4 border rounded-3xl border-gray-900 bg-[#010409b2] backdrop-blur-md">
+    <div className="overflow-hidden py-2 md:py-4 border rounded-3xl border-gray-900 bg-[#010409b2] backdrop-blur-md">
       <Marquee pauseOnHover={true} speed={100}>
         <div className="flex items-center">
           {brands.map((brand) => (
