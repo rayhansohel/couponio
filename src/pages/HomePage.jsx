@@ -3,6 +3,8 @@ import Hero from "../components/Hero";
 import BrandCart from "../components/BrandCart";
 import BrandsMarquee from "../components/BrandsMarquee"; // Import BrandMarquee
 import { useBrandContext } from "../contexts/BrandProvider"; // Import context
+import Faq from "../components/Faq";
+import ImageGrid from "../components/ImageGrid";
 
 const HomePage = () => {
   const { brands } = useBrandContext(); // Get the brands data from the context
@@ -12,7 +14,7 @@ const HomePage = () => {
       <Helmet>
         <title>Home - Couponio</title>
       </Helmet>
-      <div className="container space-y-6 md:space-y-12">
+      <div className="container space-y-6 md:space-y-20">
         {/* Display Hero Slider*/}
         <div>
           <Hero />
@@ -30,6 +32,20 @@ const HomePage = () => {
             Brands on Sell
           </div>
           <BrandCart />
+        </div>
+        {/* Display Image grid*/}
+        <div className="flex flex-col items-center justify-center">
+        <div className="text-3xl md:text-3xl bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 bg-clip-text text-transparent pb-6">
+            Beast Deals
+          </div>
+          <ImageGrid />
+        </div>
+        {/* Display FAQs */}
+        <div className="flex flex-col items-center justify-center">
+          <div className="text-3xl md:text-3xl bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 bg-clip-text text-transparent pb-6">
+            FAQs About Couponio
+          </div>
+          <Faq />
         </div>
       </div>
     </div>

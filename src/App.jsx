@@ -13,7 +13,7 @@ function App() {
         {/* load Page here */}
         <Outlet />
       </div>
-      <div className="min-h-16 flex justify-center items-center border-t border-gray-900 bg-[#010409b2] backdrop-blur-md mt-10">
+      <div className="min-h-16 flex justify-center items-center border-t border-gray-900 bg-[#010409b2] backdrop-blur-md md:mt-10">
         {/* Common footer */}
         <Footer />
       </div>
