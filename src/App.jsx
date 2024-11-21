@@ -9,7 +9,7 @@ function App() {
         {/* Common header */}
         <Header />
       </div>
-      <div className="flex items-center justify-center min-h-[calc(100vh-373px)] py-16 ">
+      <div className="flex items-center justify-center min-h-[calc(100vh-373px)] py-6 md:py-10 xl:py-16 ">
         {/* load Page here */}
         <Outlet />
       </div>

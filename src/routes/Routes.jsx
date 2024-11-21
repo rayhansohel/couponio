@@ -9,7 +9,7 @@ import AboutPage from "../pages/AboutPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import ProfileUpdatePage from "../pages/ProfileUpdatePage";
 import ProfilePage from "../pages/ProfilePage";
-import PrivateRoute from "./PrivateRoute"; // make sure to import the PrivateRoute
+import PrivateRoute from "./PrivateRoute";
 
 const Routes = createBrowserRouter([
   {
