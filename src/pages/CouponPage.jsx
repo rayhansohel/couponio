@@ -74,15 +74,18 @@ const CouponPage = () => {
 
   return (
     <div className="container mx-auto p-8">
+      <div className="text-xl md:text-3xl bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 bg-clip-text text-transparent mb-6 text-center">
+        Coupons by Brand
+      </div>
       {brand && (
         <>
-          <div className="p-6 flex flex-col md:flex-row text-center md:text-start items-center gap-4">
+          <div className="p-6 flex text-center md:text-start items-center justify-center gap-4">
             <div>
               {" "}
               <img
                 src={brand.brand_logo}
                 alt={brand.brand_name}
-                className="mx-auto h-32 w-32 object-contain border border-gray-900 rounded-full bg-gray-200"
+                className="mx-auto w-24 h-24 object-contain border border-gray-900 rounded-full bg-white "
               />
             </div>
             <div>
@@ -96,15 +99,15 @@ const CouponPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {brand.coupons?.length > 0 ? (
               brand.coupons.map((coupon) => (
                 <div
                   key={coupon.id}
-                  className="bg-gray-950 p-6 border border-gray-900 rounded-3xl shadow-lg"
+                  className="bg-gray-950 p-6 border border-gray-900 rounded-3xl shadow-lg flex flex-col justify-between"
                 >
-                  <div className="space-y-2">
-                    <p className="text-xl ">
+                  <div className="space-y-1">
+                    <p className="text-xl mb-4">
                       Coupon Code:{" "}
                       <span className="text-lime-400">
                         {coupon.coupon_code}
@@ -129,7 +132,7 @@ const CouponPage = () => {
                       onCopy={() => toast.success("Coupon code copied!")}
                     >
                       <button className="flex justify-center items-center gap-2 bg-gray-900 hover:bg-gradient-to-br from-lime-200 via-lime-400 to-lime-500 rounded-full text-sm py-2 px-6 text-center text-lime-400 hover:text-black">
-                      <MdOutlineContentCopy className="text-lg -ml-1" />
+                        <MdOutlineContentCopy className="text-lg -ml-1" />
                         Copy Code
                       </button>
                     </CopyToClipboard>

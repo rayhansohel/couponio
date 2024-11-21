@@ -1,35 +1,36 @@
 # Couponio 🛍️  
+![Couponio Logo](src/assets/couponio-logo.png)  
+
 **Your Ultimate Coupon Hub!**  
 
-Couponio is a dynamic web platform where users can find, share, and use the latest discount coupons for a wide variety of stores and online platforms. Our mission is to help users save money while shopping online.  
+[Live Site](https://b10a9-couponio.netlify.app/)  
 
----
+## Purpose 💡  
+Couponio is a single-page web application designed to help users find, save, and share discount coupons, making online shopping more affordable and convenient.  
 
-## Features ✨  
-### 🔍 **Search for Coupons**  
-- Find coupons for your favorite stores with ease.  
-- Filter coupons by category or store name.  
-
-### 🏷️ **Explore Categories**  
-- Browse coupons by categories such as Electronics, Fashion, Groceries, and more.  
-
-### 🌟 **Save & Share Coupons**  
-- Save your favorite coupons for later use.  
-- Share coupons with others via social media.  
-
-### 🔔 **Real-time Updates**  
-- Get notifications for newly added or expiring coupons.  
-
-### 📊 **Analytics Dashboard**  
-- View popular coupons and track savings over time.  
-
----
+## Key Features ✨  
+- **Search & Filter Coupons**: Easily find coupons for your favorite stores.  
+- **Top Brands**: Discover popular brands via dynamic carousels.  
+- **Private Routes**: Access exclusive brand details and user profiles.  
+- **Authentication**: Secure login, registration, and Google authentication.  
+- **Notifications**: Real-time updates and toast alerts.  
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop.  
 
 ## Technologies Used 🛠️  
 - **Frontend**: React.js, Tailwind CSS, DaisyUI  
 - **Authentication**: Firebase  
+- **Animations**: AOS  
 - **Notifications**: React-Toastify  
+- **Utilities**: react-router-dom, react-copy-to-clipboard  
 
+## NPM Packages 📦  
+- `react-router-dom`  
+- `firebase`  
+- `react-toastify`  
+- `react-copy-to-clipboard`  
+- `aos`  
+- `tailwindcss`  
+- `daisyui`  
 
-
-
+---
+Start saving today with [Couponio](https://b10a9-couponio.netlify.app/)!  

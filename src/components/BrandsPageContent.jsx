@@ -74,7 +74,7 @@ const BrandsPageContent = () => {
               key={brand.id} // Updated to use id
               className="p-6 shadow-2xl rounded-3xl border border-gray-900 bg-[#010409b2] backdrop-blur-xl flex flex-col md:flex-row text-center md:text-start justify-between items-center gap-4"
             >
-              <div className="md:flex space-y-4 space-x-6 items-center">
+              <div className="md:flex space-y-4 md:space-x-6 items-center">
                 {/* Brand Logo */}
                 <img
                   src={brand.brand_logo}
@@ -82,7 +82,7 @@ const BrandsPageContent = () => {
                   className="mx-auto h-32 w-32 object-contain border border-gray-900 rounded-full bg-gray-200"
                 />
                 {/* Brand Info */}
-                <div className="flex flex-col items-center md:items-start w-full md:w-80 xl:w-full">
+                <div className="flex flex-col items-center md:items-start w-full sm:w-72 xl:w-full">
                   <h2 className="text-2xl font-semibold">{brand.brand_name}</h2>
                   <p className="text-gray-400">{brand.description}</p>
                   <div className="flex items-center gap-1 mt-2">
