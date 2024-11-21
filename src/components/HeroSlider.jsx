@@ -8,7 +8,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const fetchSlides = async () => {
       try {
-        const response = await fetch("/public/slider.json");
+        const response = await fetch("/slider.json");
         const data = await response.json();
         setSlides(data);
       } catch (error) {

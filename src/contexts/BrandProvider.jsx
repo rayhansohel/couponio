@@ -17,7 +17,7 @@ const BrandProvider = ({ children }) => {
   useEffect(() => {
     const fetchBrands = async () => {
       try {
-        const response = await fetch("/public/coupons.json");
+        const response = await fetch("/coupons.json");
         if (!response.ok) {
           throw new Error("Failed to fetch brands");
         }
