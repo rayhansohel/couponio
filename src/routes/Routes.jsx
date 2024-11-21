@@ -9,7 +9,8 @@ import AboutPage from "../pages/AboutPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import ProfileUpdatePage from "../pages/ProfileUpdatePage";
 import ProfilePage from "../pages/ProfilePage";
-import PrivateRoute from "./PrivateRoute";
+import CouponPage from "../pages/CouponPage";  // Import CouponPage
+import PrivateRoute from "./PrivateRoute";  // Ensure PrivateRoute is in place
 
 const Routes = createBrowserRouter([
   {
@@ -28,6 +29,14 @@ const Routes = createBrowserRouter([
       {
         path: "/about",
         element: <AboutPage />,
+      },
+      {
+        path: "/brands/:id",
+        element: (
+          <PrivateRoute>
+            <CouponPage />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/profile",

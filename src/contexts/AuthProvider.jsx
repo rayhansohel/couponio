@@ -40,6 +40,11 @@ const AuthProvider = ({ children }) => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
       setUser(result.user);
+
+      // Get the ID token and store it in localStorage
+      const idToken = await result.user.getIdToken();
+      localStorage.setItem("authToken", idToken);  // Save the token in localStorage
+
       return result.user;
     } catch (err) {
       handleError(err);
@@ -52,6 +57,11 @@ const AuthProvider = ({ children }) => {
     try {
       const result = await createUserWithEmailAndPassword(auth, email, password);
       setUser(result.user);
+
+      // Get the ID token and store it in localStorage
+      const idToken = await result.user.getIdToken();
+      localStorage.setItem("authToken", idToken);  // Save the token in localStorage
+
       return result.user;
     } catch (err) {
       handleError(err);
@@ -65,6 +75,11 @@ const AuthProvider = ({ children }) => {
     try {
       const result = await signInWithEmailAndPassword(auth, email, password);
       setUser(result.user);
+
+      // Get the ID token and store it in localStorage
+      const idToken = await result.user.getIdToken();
+      localStorage.setItem("authToken", idToken);  // Save the token in localStorage
+
       return result.user;
     } catch (err) {
       handleError(err);
@@ -77,6 +92,9 @@ const AuthProvider = ({ children }) => {
     try {
       await signOut(auth);
       setUser(null);
+
+      // Clear the auth token from localStorage
+      localStorage.removeItem("authToken");
     } catch (err) {
       handleError(err);
     }
@@ -110,6 +128,15 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
+
+      // If there's a user, store the token in localStorage
+      if (currentUser) {
+        currentUser.getIdToken().then((idToken) => {
+          localStorage.setItem("authToken", idToken);
+        });
+      } else {
+        localStorage.removeItem("authToken");
+      }
     });
     return () => unsubscribe();
   }, []);

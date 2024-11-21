@@ -1,387 +1,387 @@
 [
     {
-      "_id": "1",
+      "id": "1",
       "brand_name": "Daraz",
       "rating": 4.7,
       "description": "Daraz is one of the largest e-commerce platforms in Bangladesh, offering a wide range of products.",
       "brand_logo": "https://i.ibb.co.com/r6Z0sRH/daraz-logo.png",
       "coupons": [
         {
-          "coupon-code": "DARAZ100",
+          "coupon_code": "DARAZ100",
           "description": "Get BDT 100 off on your next purchase.",
-          "expiry-date": "2024-12-10",
+          "expiry_date": "2024-12-10",
           "condition": "Valid for orders above BDT 1000.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "DARAZ50",
+          "coupon_code": "DARAZ50",
           "description": "Get BDT 50 off on selected categories.",
-          "expiry-date": "2024-11-30",
+          "expiry_date": "2024-11-30",
           "condition": "Valid for fashion items only.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "DARAZ200",
+          "coupon_code": "DARAZ200",
           "description": "Get BDT 200 off on your next order.",
-          "expiry-date": "2024-12-15",
+          "expiry_date": "2024-12-15",
           "condition": "Valid for orders above BDT 2000.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "DARAZBUY1GET1",
+          "coupon_code": "DARAZBUY1GET1",
           "description": "Buy 1 get 1 free on selected items.",
-          "expiry-date": "2024-12-20",
+          "expiry_date": "2024-12-20",
           "condition": "Valid for select fashion items.",
           "coupon_type": "Offer"
         }
       ],
-      "shop-Link": "https://www.daraz.com.bd/",
+      "link": "https://www.daraz.com.bd/",
       "category": "E-commerce",
       "isSaleOn": true
     },
 
     {
-      "_id": "2",
+      "id": "2",
       "brand_name": "Aarong",
       "rating": 4.5,
       "description": "Aarong is one of the largest retail chains in Bangladesh, known for handmade products.",
       "brand_logo": "https://i.ibb.co.com/JdhLYCX/aarong-logo.png",
       "coupons": [
         {
-          "coupon-code": "AARONG15",
+          "coupon_code": "AARONG15",
           "description": "Get 15% off on your next purchase.",
-          "expiry-date": "2024-12-05",
+          "expiry_date": "2024-12-05",
           "condition": "Valid for online orders only.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "AARONGBUY2GET1",
+          "coupon_code": "AARONGBUY2GET1",
           "description": "Buy 2 items and get 1 free on selected products.",
-          "expiry-date": "2024-12-10",
+          "expiry_date": "2024-12-10",
           "condition": "Valid for selected categories.",
           "coupon_type": "Offer"
         },
         {
-          "coupon-code": "AARONG25",
+          "coupon_code": "AARONG25",
           "description": "Get 25% off on selected items.",
-          "expiry-date": "2024-12-15",
+          "expiry_date": "2024-12-15",
           "condition": "Valid for in-store purchases only.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "AARONG100",
+          "coupon_code": "AARONG100",
           "description": "Get BDT 100 off on a minimum purchase of BDT 500.",
-          "expiry-date": "2024-11-30",
+          "expiry_date": "2024-11-30",
           "condition": "Valid on selected products.",
           "coupon_type": "Discount"
         }
       ],
-      "shop-Link": "https://www.aarong.com/",
+      "link": "https://www.aarong.com/",
       "category": "Fashion",
       "isSaleOn": false
     },
 
     {
-      "_id": "3",
+      "id": "3",
       "brand_name": "Bata",
       "rating": 4.5,
       "description": "Bata is a popular footwear brand known for its comfortable and stylish shoes.",
       "brand_logo": "https://i.ibb.co.com/sRKcWP5/bata-logo.png",
       "coupons": [
         {
-          "coupon-code": "BATA20",
+          "coupon_code": "BATA20",
           "description": "Get 20% off on your next footwear purchase.",
-          "expiry-date": "2024-12-10",
+          "expiry_date": "2024-12-10",
           "condition": "Excludes sale items.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "BATA25",
+          "coupon_code": "BATA25",
           "description": "Get 25% off on selected footwear items.",
-          "expiry-date": "2024-12-15",
+          "expiry_date": "2024-12-15",
           "condition": "Valid on selected products only.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "BATABUY1GET1",
+          "coupon_code": "BATABUY1GET1",
           "description": "Buy 1 pair of shoes and get 1 free.",
-          "expiry-date": "2024-12-05",
+          "expiry_date": "2024-12-05",
           "condition": "Valid on selected footwear only.",
           "coupon_type": "Offer"
         }
       ],
-      "shop-Link": "https://www.bata.com.bd/",
+      "link": "https://www.bata.com.bd/",
       "category": "Footwear",
       "isSaleOn": true
     },
 
     {
-      "_id": "4",
+      "id": "4",
       "brand_name": "Unilever",
       "rating": 4.6,
       "description": "Unilever offers a variety of household, personal care, and food products in Bangladesh.",
       "brand_logo": "https://i.ibb.co.com/gtLRKMT/unilever-logo.png",
       "coupons": [
         {
-          "coupon-code": "UNILEVER50",
+          "coupon_code": "UNILEVER50",
           "description": "Get BDT 50 off on your next purchase of personal care items.",
-          "expiry-date": "2024-12-01",
+          "expiry_date": "2024-12-01",
           "condition": "Valid for orders over BDT 500.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "UNILEVER100",
+          "coupon_code": "UNILEVER100",
           "description": "Get BDT 100 off on your first purchase of any Unilever product.",
-          "expiry-date": "2024-12-10",
+          "expiry_date": "2024-12-10",
           "condition": "Valid for first-time customers.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "UNILEVER15",
+          "coupon_code": "UNILEVER15",
           "description": "Get 15% off on selected household products.",
-          "expiry-date": "2024-11-25",
+          "expiry_date": "2024-11-25",
           "condition": "Valid for online orders only.",
           "coupon_type": "Discount"
         }
       ],
-      "shop-Link": "https://www.unilever.com.bd/",
+      "link": "https://www.unilever.com.bd/",
       "category": "Consumer Goods",
       "isSaleOn": false
     },
 
     {
-      "_id": "5",
+      "id": "5",
       "brand_name": "Shwapno",
       "rating": 4.8,
       "description": "Shwapno offers a wide range of groceries and daily essentials in Bangladesh.",
       "brand_logo": "https://i.ibb.co.com/BgbVYYd/shwapno-logo.png",
       "coupons": [
         {
-          "coupon-code": "SWAPNO100",
+          "coupon_code": "SWAPNO100",
           "description": "Get BDT 100 off on your next grocery purchase.",
-          "expiry-date": "2024-12-15",
+          "expiry_date": "2024-12-15",
           "condition": "Minimum purchase of BDT 1000.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "SWAPNO50",
+          "coupon_code": "SWAPNO50",
           "description": "Get BDT 50 off on selected items.",
-          "expiry-date": "2024-11-30",
+          "expiry_date": "2024-11-30",
           "condition": "Valid only for online orders.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "SWAPNO200",
+          "coupon_code": "SWAPNO200",
           "description": "Get BDT 200 off on orders above BDT 2000.",
-          "expiry-date": "2024-12-20",
+          "expiry_date": "2024-12-20",
           "condition": "Valid for selected grocery items.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "SWAPNOFREEDELIVERY",
+          "coupon_code": "SWAPNOFREEDELIVERY",
           "description": "Get free delivery on orders above BDT 500.",
-          "expiry-date": "2024-12-05",
+          "expiry_date": "2024-12-05",
           "condition": "Valid for online orders only.",
           "coupon_type": "Offer"
         }
       ],
-      "shop-Link": "https://www.shwapno.com.bd/",
+      "link": "https://www.shwapno.com.bd/",
       "category": "Groceries",
       "isSaleOn": true
     },
 
     {
-      "_id": "6",
+      "id": "6",
       "brand_name": "Chaldal",
       "rating": 4.6,
       "description": "Chaldal is one of the most popular online grocery delivery services in Bangladesh.",
       "brand_logo": "https://i.ibb.co.com/ckKzx4Z/chaldal-logo.png",
       "coupons": [
         {
-          "coupon-code": "CHALDAL15",
+          "coupon_code": "CHALDAL15",
           "description": "Get 15% off on your grocery order.",
-          "expiry-date": "2024-11-25",
+          "expiry_date": "2024-11-25",
           "condition": "Valid for orders over BDT 1000.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "CHALDAL100",
+          "coupon_code": "CHALDAL100",
           "description": "Get BDT 100 off on your first grocery order above BDT 1000.",
-          "expiry-date": "2024-12-05",
+          "expiry_date": "2024-12-05",
           "condition": "Valid for first-time users only.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "CHALDAL200",
+          "coupon_code": "CHALDAL200",
           "description": "Get BDT 200 off on your order above BDT 2000.",
-          "expiry-date": "2024-12-15",
+          "expiry_date": "2024-12-15",
           "condition": "Valid for selected items.",
           "coupon_type": "Discount"
         }
       ],
-      "shop-Link": "https://www.chaldal.com/",
+      "link": "https://www.chaldal.com/",
       "category": "Groceries",
       "isSaleOn": true
     },
 
     {
-      "_id": "7",
+      "id": "7",
       "brand_name": "Robi",
       "rating": 4.3,
       "description": "Robi is one of the leading telecom operators in Bangladesh offering a wide range of mobile services.",
       "brand_logo": "https://i.ibb.co.com/DkRfdXV/robi-logo.png",
       "coupons": [
         {
-          "coupon-code": "ROBI50",
+          "coupon_code": "ROBI50",
           "description": "Get BDT 50 off on your next prepaid recharge.",
-          "expiry-date": "2024-12-01",
+          "expiry_date": "2024-12-01",
           "condition": "Valid for prepaid customers only.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "ROBI100",
+          "coupon_code": "ROBI100",
           "description": "Get BDT 100 off on mobile internet packages.",
-          "expiry-date": "2024-12-10",
+          "expiry_date": "2024-12-10",
           "condition": "Valid for internet users only.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "ROBIGET1GET1",
+          "coupon_code": "ROBIGET1GET1",
           "description": "Get 1GB internet free when you buy a 1GB data pack.",
-          "expiry-date": "2024-12-15",
+          "expiry_date": "2024-12-15",
           "condition": "Valid for new data pack subscribers.",
           "coupon_type": "Offer"
         },
         {
-          "coupon-code": "ROBI25",
+          "coupon_code": "ROBI25",
           "description": "Get 25% off on select Robi data plans.",
-          "expiry-date": "2024-11-25",
+          "expiry_date": "2024-11-25",
           "condition": "Applicable for data plan subscriptions.",
           "coupon_type": "Discount"
         }
       ],
-      "shop-Link": "https://www.robi.com.bd/",
+      "link": "https://www.robi.com.bd/",
       "category": "Telecom",
       "isSaleOn": false
     },
 
     {
-      "_id": "8",
+      "id": "8",
       "brand_name": "Othoba",
       "rating": 4.3,
       "description": "Othoba is an online marketplace offering various categories including electronics, fashion, and groceries.",
       "brand_logo": "https://i.ibb.co.com/dkMQgKd/othoba-logo.png",
       "coupons": [
         {
-          "coupon-code": "OTHOBA50",
+          "coupon_code": "OTHOBA50",
           "description": "Get BDT 50 off on your first purchase.",
-          "expiry-date": "2024-12-05",
+          "expiry_date": "2024-12-05",
           "condition": "Valid for first-time users only.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "OTHOBA200",
+          "coupon_code": "OTHOBA200",
           "description": "Get BDT 200 off on orders above BDT 2000.",
-          "expiry-date": "2024-12-20",
+          "expiry_date": "2024-12-20",
           "condition": "Valid for selected items.",
           "coupon_type": "Discount"
         }
       ],
-      "shop-Link": "https://www.othoba.com/",
+      "link": "https://www.othoba.com/",
       "category": "E-commerce",
       "isSaleOn": false
     },
     
     {
-      "_id": "9",
+      "id": "9",
       "brand_name": "Meena Bazar",
       "rating": 4.6,
       "description": "Meena Bazar offers a wide range of groceries and household items.",
       "brand_logo": "https://i.ibb.co.com/RhxVr3x/meena-bazar-logo.png",
       "coupons": [
         {
-          "coupon-code": "MEENA100",
+          "coupon_code": "MEENA100",
           "description": "Get BDT 100 off on your grocery order above BDT 1500.",
-          "expiry-date": "2024-12-01",
+          "expiry_date": "2024-12-01",
           "condition": "Valid on online orders only.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "MEENA50",
+          "coupon_code": "MEENA50",
           "description": "Get BDT 50 off on your purchase of any grocery items.",
-          "expiry-date": "2024-11-30",
+          "expiry_date": "2024-11-30",
           "condition": "Valid on select grocery items only.",
           "coupon_type": "Discount"
         },
         {
-          "coupon-code": "MEENADELIVERY",
+          "coupon_code": "MEENADELIVERY",
           "description": "Free delivery on orders above BDT 1000.",
-          "expiry-date": "2024-12-10",
+          "expiry_date": "2024-12-10",
           "condition": "Valid for online orders only.",
           "coupon_type": "Offer"
         }
       ],
-      "shop-Link": "https://www.meenabazar.com.bd/",
+      "link": "https://www.meenabazar.com.bd/",
       "category": "Groceries",
       "isSaleOn": true
     },
 
     {
-      "_id": "10",
+      "id": "10",
       "brand_name": "Rokomari",
       "rating": 4.7,
       "description": "Rokomari is a leading online bookstore in Bangladesh with a vast collection of books and educational materials.",
       "brand_logo": "https://i.ibb.co.com/mHFVzHM/rokomari-logo.png",
       "coupons": [
         {
-          "coupon-code": "ROKOMARI100",
+          "coupon_code": "ROKOMARI100",
           "description": "Get BDT 100 off on book purchases above BDT 1000.",
-          "expiry-date": "2024-12-10",
+          "expiry_date": "2024-12-10",
           "condition": "Valid for book purchases only.",
           "coupon_type": "Discount"
         }
       ],
-      "shop-Link": "https://www.rokomari.com/",
+      "link": "https://www.rokomari.com/",
       "category": "Books",
       "isSaleOn": false
     },
 
     {
-      "_id": "11",
+      "id": "11",
       "brand_name": "Pickabo",
       "rating": 4.2,
       "description": "Pickabo is an online E-commerce store offering trendy electronics, gadgets, and accessories.",
       "brand_logo": "https://i.ibb.co.com/KVTdBnV/pickabo-logo.png",
       "coupons": [
         {
-          "coupon-code": "PICKABO10",
+          "coupon_code": "PICKABO10",
           "description": "Get 10% off on your first Product purchase.",
-          "expiry-date": "2024-11-30",
+          "expiry_date": "2024-11-30",
           "condition": "Valid for new customers only.",
           "coupon_type": "Discount"
         }
       ],
-      "shop-Link": "https://www.pickabo.com.bd/",
+      "link": "https://www.pickabo.com.bd/",
       "category": "E-commerce",
       "isSaleOn": false
     },
 
     {
-      "_id": "12",
+      "id": "12",
       "brand_name": "Apex",
       "rating": 4.6,
       "description": "Apex is a well-known footwear brand in Bangladesh, offering a variety of shoes and accessories.",
       "brand_logo": "https://i.ibb.co.com/JsWD97N/apex-logo.png",
       "coupons": [
         {
-          "coupon-code": "APEX30",
+          "coupon_code": "APEX30",
           "description": "Get 30% off on selected footwear.",
-          "expiry-date": "2024-12-15",
+          "expiry_date": "2024-12-15",
           "condition": "Valid for select items only.",
           "coupon_type": "Discount"
         }
       ],
-      "shop-Link": "https://www.apex.com.bd/",
+      "link": "https://www.apex.com.bd/",
       "category": "Footwear",
       "isSaleOn": true
     }

@@ -11,8 +11,19 @@ const PrivateRoute = ({ children }) => {
     return <div className="text-center">Loading...</div>;
   }
 
-  // Redirect to login if user is not authenticated
-  return user ? children : <Navigate to="/auth/login" state={{ from: location }} replace />;
+  // If user is authenticated, allow them to view the children (protected content)
+  if (user) {
+    return children;
+  }
+
+  // If user is not authenticated, redirect to login with the current location
+  return (
+    <Navigate
+      to="/auth/login"
+      state={{ from: location }} // Store the current location for redirection after login
+      replace
+    />
+  );
 };
 
 export default PrivateRoute;
