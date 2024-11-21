@@ -1,4 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HeroSlider = () => {
   const [slides, setSlides] = useState([]);
@@ -34,10 +37,18 @@ const HeroSlider = () => {
     scrollToSlide(index);
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false, 
+    });
+  }, []);
+
   return (
     <div
       ref={sliderRef}
       className="carousel w-full min-h-[200px] rounded-3xl border border-gray-900 bg-[#010409b2] overflow-hidden"
+      data-aos="fade-up"
     >
       {slides.map((slide, index) => (
         <div

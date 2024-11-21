@@ -2,7 +2,9 @@ import { Outlet } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./components/Footer";
 
+
 function App() {
+
   return (
     <div className="font-poppins bg-gray-950 text-white ">
       <div className="sticky top-0 z-50">

@@ -1,4 +1,7 @@
 import { useBrandContext } from "../contexts/BrandProvider";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BrandCart = () => {
   const { brands, loading, error } = useBrandContext();
@@ -9,10 +12,19 @@ const BrandCart = () => {
 
   const filteredBrands = brands?.filter((brand) => brand.isSaleOn);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      offset: 300,
+    });
+  }, []);
+
   return (
     <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {filteredBrands?.map((brand) => (
         <div
+          data-aos="fade-up"
           key={brand.id}
           className="shadow-2xl rounded-3xl border border-gray-900 bg-[#010409b2] text-sm backdrop-blur-xl hover:scale-105 transition-transform"
         >
@@ -44,4 +56,3 @@ const BrandCart = () => {
 };
 
 export default BrandCart;
-

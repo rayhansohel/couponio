@@ -7,8 +7,8 @@ import Faq from "../components/Faq";
 import ImageGrid from "../components/ImageGrid";
 
 const HomePage = () => {
-  const { brands } = useBrandContext(); // Get the brands data from the context
-
+  const { brands } = useBrandContext();
+  
   return (
     <div>
       <Helmet>

@@ -1,8 +1,17 @@
-import React from "react";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import AOS from "aos";
 
 const Faq = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000,
+          once: false, 
+          offset: 300, 
+        });
+      }, []);
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="w-11/12 mx-auto" data-aos="fade-up">
       <div className="join join-vertical w-full rounded-3xl bg-[#010409b2] backdrop-blur-xl">
         <div className="collapse collapse-arrow join-item border border-gray-900 ">
           <input type="radio" name="my-accordion-4" defaultChecked />
